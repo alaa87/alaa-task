@@ -11,15 +11,14 @@
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod",
     "start": "node server.js"
-
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "1.4.3",
-    "@angular/compiler-cli": "4.4.4",
     "@angular/animations": "4.4.4",
+    "@angular/cli": "1.4.3",
     "@angular/common": "4.4.4",
     "@angular/compiler": "4.4.4",
+    "@angular/compiler-cli": "4.4.4",
     "@angular/core": "4.4.4",
     "@angular/forms": "4.4.4",
     "@angular/http": "4.4.4",
@@ -29,15 +28,16 @@
     "@angular/router": "4.4.4",
     "bootstrap": "4.0.0-alpha.4",
     "core-js": "2.4.1",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "glyphicons": "^0.2.0",
     "ionicons": "^3.0.0",
     "jquery": "3.2.1",
     "material-design-iconic-font": "^2.2.0",
     "ng2-bootstrap": "1.6.3",
-    "express": "^4.16.2",
     "primeng": "^4.3.0-rc.2",
     "rxjs": "5.4.2",
+    "typescript": "^2.3.4",
     "zone.js": "0.8.11"
   },
   "devDependencies": {
