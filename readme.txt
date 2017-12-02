@@ -1,9 +1,9 @@
-How to run the Project
+How to run the Project Local
 
-1-      Download Node Js => https://nodejs.org/dist/v6.11.5/node-v6.11.5-x64.msi
+1-      Download Node Js => https://nodejs.org/dist/v8.9.1/node-v8.9.1-x64.msi
 
 
-2-      Open cmd inside the project folder “Angular cli location”.
+2-      Open cmd inside the project folder “Angular cli file location”.
 
 3-      Download npm using = > “ npm install download “ command.
 
@@ -13,12 +13,7 @@ How to run the Project
 
  
 
-Notes: 
-
-·         If you want to change the port you can go to angular cli file, inside defaults object you will find serve object, you can change the port from it, but to use the app by a new port you have to stop the app by clicking " ctrl + c " in command line  then run “ npm start “ command again. After that, you will see the project hosted by a new port.
-
-·         If you want to deploy the project  " for responsive case " you have to run “ npm run build “ command then you will find a folder called dist inside the project path created, then set the physical path in IIS on it. Note: this folder always deleted when running “ npm start “ command.
-
+Notes: If you want to change the port you can go to angular cli file, inside defaults object you will find serve object, you can change the port from it, but to use the app by a new port you have to stop the app by clicking " ctrl + c " in command line  then run “ npm start “ command again. After that, you will see the project hosted by a new port.
 
 Let me know if you need any help,
  
