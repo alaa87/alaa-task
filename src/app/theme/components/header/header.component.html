@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <a id="search-item" class="header-item col-lg-10 col-md-9 col-xs-8 col-sm-6" (click)="startSearch()">
+            <i class="zmdi zmdi-search hm-icon">
+                <span>Search</span>
+            </i>
+        </a>
+
+        <ul class="header-item col-lg-2 col-md-3 col-xs-4 col-sm-3 text-lg-right f-menu">
+            <li>
+                <a>
+                    <i class="zmdi zmdi-twitter-box zmdi-hc-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="zmdi zmdi-facebook-box zmdi-hc-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="zmdi zmdi-instagram zmdi-hc-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="search-bar" class="bar">
+    <div class="outer" (click)="endSearch()">
+        <div class="inner">
+            <label>Back</label>
+        </div>
+    </div>
+
+    <div class="form-wrapper">
+        <div class="form-content">
+            <input class="search-input" placeholder="Search ..." />
+            <span class="info">Hit enter to search</span>
+        </div>
+
+    </div>
+</div>

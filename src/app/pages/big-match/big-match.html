@@ -1,0 +1,54 @@
+<div class="col-md-4 col-sm-12 col-xs-12 big-match" *ngFor="let match of matches">
+    <div class="card-header">
+    </div>
+    <div class="content span2">
+        <img src="{{ ( match.FirstTeam | baAppPicture ) }}" class="avatar" />
+        <span>{{match.FirstTeamName}}</span>
+    </div>
+    <div id="league" class="content span2">
+        <img src="{{ ( match.MatchLeague | baAppPicture ) }}" />
+        <span>Abdul Latif Jameel League</span>
+        <h3>VS</h3>
+    </div>
+    <div class="content span2">
+        <img src="{{ ( match.SecondTeam | baAppPicture ) }}" class="avatar" />
+        <span>{{match.SecondTeamName}}</span>
+    </div>
+
+    <div id="match-details">
+        <ul class="f-menu">
+            <li>
+                <a>
+                    {{match.MatchDate}}
+                </a>
+            </li>
+            <li>
+                <a>
+                    {{match.MatchTime}}
+                </a>
+            </li>
+            <li>
+                <a>
+                    Available Seats {{match.AvailableSeat}}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="location">
+        <span>
+            <i class="fa fa-map-marker"></i>
+            {{match.Location}}
+        </span>
+    </div>
+    <div id="get-ticket" class="col-sm-12">
+        <button type="button"
+        [routerLink]="['/pages/getTicket/' + match.Id]"
+        class="btn btn-block animated animatedFadeInUp">Get Ticket</button>
+    </div>
+    <div class="footer">
+        <span>
+                <i class="ionicons ion-flame"></i>
+            Big Match
+        </span>
+    </div>
+</div>

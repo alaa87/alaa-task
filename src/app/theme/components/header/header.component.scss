@@ -1,0 +1,141 @@
+@import '../../sass/_variables';
+$brand-width: 350px;
+
+.navbar-fixed-top {
+  color: $topnav-text;
+  background: $topnav;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: $sidebar-width;
+}
+
+#search-item{
+  span{
+    font-size: $x-large-font-size;
+    font-family: $font-family-light;
+  }
+}
+
+#search-bar {
+  padding-bottom: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50vh;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.outer {
+  position: fixed;
+  margin: auto;
+  width: 20px;
+  margin-top: 0;
+  cursor: pointer;
+  top: 10px;
+  right: 20px;
+  z-index: 1051;
+
+  .inner {
+    width: inherit;
+    text-align: center;
+  }
+
+  .inner:before, .inner:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: #898989;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+
+  .inner:before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .inner:after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+
+  label {
+    font-size: .8em;
+    line-height: 4em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+
+.form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s;
+  transition-timing-function: cubic-bezier(.2,1,.3,1);
+
+  .form-content {
+    margin: 0 0;
+
+    .search-input {
+      color: #898989;
+      border-bottom: 4px solid $background-color;
+      font-size: 7vw;
+      width: 75%;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      background: transparent;
+      border-radius: 0;
+      line-height: 1;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: .05rem 0;
+      -webkit-appearance: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .info {
+    display: block;
+    font-size: 90%;
+    font-weight: 700;
+    width: 75%;
+    margin: 0 auto;
+    padding: .85rem 0;
+    text-align: right;
+    color: #898989;
+  }
+}

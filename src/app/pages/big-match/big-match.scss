@@ -1,0 +1,170 @@
+@import '../../theme/sass/_variables';
+
+.big-match {
+  background: $default;
+  color: #2e3436;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 7px solid #f6f6f6;
+  transition: height  0;
+  .card-header{
+    background: $default;
+    color: #2e3436;
+    height: 20px;
+    padding: 10px;
+    border-radius: 14px 14px 0 0;
+    border: 0;
+    transition: height  0.4s ease-in;
+  }
+
+  .content{
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    padding: 0;
+    float: left;
+
+    span {
+      display: block;
+      font-size: 15px;
+    }
+    
+  }
+
+  #league{
+    width: 40%;
+    span{
+      font-size: 9px;
+      color: #9a9a9a;
+      display: block;
+      font-family: $font-family-light;
+    }
+
+    img{
+      max-width: 60px;
+      max-height: 60px;  
+    }
+
+    h3{
+      padding-top: 5px;
+      color: #9a9a9a;
+    }
+  }
+  
+  .avatar {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .footer {
+    font-size: $small-font-size;
+    padding: 20px 10px;
+    width: 100%;
+    color: #9a9a9a;
+
+    i{
+      color: rgba(246,41,12,1);
+    }
+  }
+
+  &:hover{
+    .animatedFadeInUp {
+      opacity: 0;
+      animation-name: fadeInUp;
+      -webkit-animation-name: fadeInUp;
+    }
+
+  }
+
+  #match-details{
+    font-size: $small-font-size - 1;
+    color: #9a9a9a;
+    text-align: center;
+    padding: 100px 5px 5px 5px;
+    ul{
+      padding: 0;
+      font-family: $font-family-light;
+      & > li{
+
+        padding-top: 10px;
+        &:after{
+          content: '|';
+        }
+      }
+  
+      & > li:last-child{
+        &:after{
+          content: ' ';
+        }
+      }
+    }
+  }
+  
+  #location{
+    font-size: $small-font-size - 1;
+    color: #9a9a9a;
+    text-align: center;
+  
+    i{
+      color: $sidebar;
+    }
+  }
+  
+  #get-ticket{
+    padding: 10px 40px;
+  
+    button{
+      border-radius: 30px;
+      padding: 15px;
+      border: 0;
+      color: $default;
+      background: rgba(181,73,63,1);
+      background: -moz-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(181,73,63,1)), color-stop(0%, rgba(246,41,12,1)), color-stop(29%, rgba(224,63,45,1)), color-stop(63%, rgba(230,99,87,1)), color-stop(100%, rgba(214,139,126,1)));
+      background: -webkit-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+      background: -o-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+      background: -ms-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+      background: linear-gradient(to right, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5493f', endColorstr='#d68b7e', GradientType=1 );
+      
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+  
+  @-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+  
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+  }
+  
+  .animatedFadeInUp {
+    opacity: 0
+  }
+  
+  .fadeInUp {
+    opacity: 0;
+  }
+}
+

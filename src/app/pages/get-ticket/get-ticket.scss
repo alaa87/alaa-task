@@ -1,0 +1,251 @@
+@import '../../theme/sass/_variables';
+
+#selectedMatchDetails{
+  position: fixed;
+  top: 0px;
+  width: 400px;
+  left: $sidebar-width;
+  height: 100%;
+  background: $default;
+  z-index: 1030;
+}
+
+#selectedMatchFrame{
+  position: fixed;
+  top: 0px;
+  width: calc(100% - 400px);
+  left: $sidebar-width + 400px;
+  height: 100%;
+  background: $default;
+  z-index: 1030;
+  background-image: url("../../../assets/images/stadium.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .dark-background{
+    background: rgba(0, 0, 0, 0.47);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.information {
+  border-bottom: 1px solid #ddd;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin: 20px 10px;
+
+  div{
+    padding: 0;
+  }
+  a{
+    i{
+      color: #da2c3b;
+    }
+    span{
+      font-size: $small-font-size - 1;
+      color: #a1a1a1;
+      display: block;
+    }
+
+    span:last-child{
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+
+.more-information{
+  padding: 10px 40px;
+  i{
+    font-size: 20px;
+    color: #da2c3b;
+  }
+  span{
+    position: absolute;
+    left: 70px;
+    top: 17px;
+      padding: 0 15px;
+    font-size: $meduim-font-size;
+    color: black;
+    font-family: $font-family;
+    font-weight: bold;
+  }
+}
+
+.more-information-location{
+  padding: 10px 40px;
+  i{
+    font-size: 25px;
+    color: #da2c3b;
+  }
+
+  small{
+    position: absolute;
+    left: 70px;
+    top: 8px;
+    font-size: $small-font-size - 2;
+    padding: 0px 15px;
+    color: #a1a1a1;
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+  span{
+    position: absolute;
+    left: 70px;
+    top: 25px;
+    padding: 0 15px;
+    font-size: $meduim-font-size;
+    color: black;
+    font-family: $font-family;
+    font-weight: bold;
+  }
+}
+
+#buy-footer{
+  position: absolute;
+  bottom: 10px;
+text-align: center;
+
+small{
+  display: block;
+  padding-top: 30px;
+  color: #a1a1a1;
+}
+  button{
+    width: 200px;
+    border-radius: 30px;
+    padding: 15px;
+    border: 0;
+    color: #ddd;
+    background: rgba(181,73,63,1);
+    background: -moz-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(181,73,63,1)), color-stop(0%, rgba(246,41,12,1)), color-stop(29%, rgba(224,63,45,1)), color-stop(63%, rgba(230,99,87,1)), color-stop(100%, rgba(214,139,126,1)));
+    background: -webkit-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+    background: -o-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+    background: -ms-linear-gradient(left, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+    background: linear-gradient(to right, rgba(181,73,63,1) 0%, rgba(246,41,12,1) 0%, rgba(224,63,45,1) 29%, rgba(230,99,87,1) 63%, rgba(214,139,126,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5493f', endColorstr='#d68b7e', GradientType=1 );
+    font-size: $meduim-font-size;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+
+    .facebook{
+      color: #3b5998;
+    }
+
+    .twitter{
+      color: #1dcaff;
+    }
+
+    .google-plus{
+      color: #dd4b39;
+    }
+    li{
+      padding: 0 20px 40px 20px;
+      display: inline-block;
+    }
+  }
+}
+
+.get-match {
+  font-size: 20px;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .content{
+    font-weight: bold;
+    text-align: center;
+    width: 20%;
+    padding: 0;
+    float: left;
+
+    span {
+      font-size: 24px;
+      padding-top: 20px;
+      display: block;
+      color: $default;
+      font-family: $font-family-light;
+    }
+    
+  }
+
+  #league{
+    padding-top: 3px;
+    width: 40%;
+    span{
+      font-size: 17px;
+      color: $default;
+      display: block;
+      font-family: $font-family-light;
+      font-weight: lighter;
+      padding: 0;
+    }
+
+    img{
+      max-width: 90px;
+      max-height: 90px;  
+    }
+
+    span:last-child{
+    padding-top: 20px;
+    font-size: 42px;
+    }
+  }
+  
+  .avatar {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  #datails{
+    font-size: $x-large-font-size;
+    color: #fff;
+    font-family: $font-family-light;
+    font-weight: lighter;
+    padding: 0 0 10px 0;
+    margin-left: 25%;
+    width: 40%; 
+      & > span{
+        display: inline-block;
+        &:after{
+          content: '|';
+        }
+      }
+  
+      & > span:last-child{
+        &:after{
+          content: ' ';
+        }
+      }
+  }
+  
+  #location{
+    font-size: $small-font-size;
+    color: rgba(255, 255, 255, 0.76);
+    text-align: center;
+    padding-top: 10px;
+    line-height: 1.3;
+    margin-left: 21%;
+    width: 40%;
+  }
+}
+
+.back-home{
+  color: #fff !important;
+  
+  i{
+    padding: 20px 30px;
+  }
+}

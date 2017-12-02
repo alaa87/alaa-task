@@ -1,0 +1,137 @@
+<div class="seats active animate-load-left">
+    <div id="match-details">
+        <div class="card-body">
+            <div class="content span2">
+                <span>{{selectedMatch.FirstTeamName}}</span>
+            </div>
+            <div id="first-team" class="content span2">
+                <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+            </div>
+            <div id="league" class="content span2">
+                <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+                <span>{{selectedMatch.MatchType}}</span>
+                <span>VS</span>
+            </div>
+            <div id="second-team" class="content span2">
+                <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+            </div>
+            <div class="content span2">
+                <span>{{selectedMatch.SecondTeamName}}</span>
+            </div>
+        </div>
+    </div>
+    <div id="seats-details" class="col-centered">
+        <div id="seats-screen" class="col-sm-12">
+                    <img src="{{ ( '/seats.png' | baAppPicture ) }}" class="avatar" />
+        </div>
+        <div class="seat-footer">
+                <div id="session-time" class="col-sm-12 col-centered">
+                        <span>Session Time:
+                            <b>14:40</b>
+                        </span>
+                    </div>
+            
+                    <div id="seats-color-details" class="col-sm-12 col-centered">
+                        <span>
+                            <i class="fa fa-circle selected"></i> Selected</span>
+                        <span>
+                            <i class="fa fa-circle available"></i> Available</span>
+                        <span>
+                            <i class="fa fa-circle reserved"></i> Reserved</span>
+                        <span>
+                            <i class="fa fa-circle not-available"></i> Not Available</span>
+                    </div>
+        </div>
+
+    </div>
+    <div id="filter">
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span>Filter </span>
+                <i class="fa fa-filter hm-icon"></i>
+            </a>
+            <ul class="dropdown-menu" data-dropdown-in="slideInRight" data-dropdown-out="flipOutX">
+                <li>
+                    <div id="header" class="col-sm-12">
+                        <div class="col-sm-6">
+                            <span>Classes</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>Prices</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="First Class" label="First Class" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>100 SR to 200 SR</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="silver" label="Silver" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>70 SR to 90 SR</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="normal" label="Normal" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>30 SR to 60 SrR</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div id="block" class="active animate-load-left">
+    <div id="choose-block" class="col-sm-12">
+        <a [routerLink]="['/pages/stadium/' + selectedMatch.Id]">
+            <i class="ionicons ion-ios-arrow-back hm-icon"></i>
+            <span>choose a seats</span>
+        </a>
+    </div>
+    <div id="block-id" class="col-sm-12">
+        <h1>Block 118</h1>
+    </div>
+
+    <div id="block-information" class="col-sm-12">
+        <div class="col-sm-5">
+            Selected Seats
+        </div>
+        <div class="offset-sm-2 col-sm-5">
+            Total Price
+        </div>
+    </div>
+
+    <div id="block-information-result" class="col-sm-12">
+        <div class="col-sm-5">
+            234, 235, 236
+        </div>
+        <div class="offset-sm-2 col-sm-5">
+            70 - 50 SR
+        </div>
+    </div>
+    
+    <div class="block-footer">
+        <div class="col-sm-12">
+                <button type="button" class="btn" [routerLink]="['/pages/matchSummary/' + selectedMatch.Id]">Buy</button>
+            </div>    
+            <div class="col-sm-12">
+                    <button id="add-seats" type="button" class="btn">Add more seats</button>
+                </div>    
+    </div>
+</div>

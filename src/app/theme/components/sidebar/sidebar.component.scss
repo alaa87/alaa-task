@@ -1,0 +1,42 @@
+@import '../../sass/_variables';
+
+.al-sidebar{
+    position: fixed;
+    background: $sidebar;
+    color: $sidebar-text;
+    width: $sidebar-width;
+    height: 100%;
+
+}
+
+.brand{
+    padding: 20px 0;
+    img{
+        width: 50px;
+    }
+}
+
+.menu-item{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        padding: 10px 10px;
+        transition: all $default-animation-duration $default-animation-style;
+        text-align: center;
+        a{
+            color: $sidebar-text;
+            font-size: $small-font-size;
+            font-family: $font-family-light;
+            text-decoration: none;
+        }
+
+        &.active{
+            border-left: 3px solid $default;
+            a{
+                font-size: $meduim-font-size;
+                font-weight: bold;
+            } 
+        }
+    }
+}

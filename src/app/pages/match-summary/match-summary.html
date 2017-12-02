@@ -1,0 +1,215 @@
+<div id="selected-match-summary" class="animate-load-left">
+    <div id="check-out" class="col-sm-12">
+        <a [routerLink]="['/pages/seats/' + selectedMatch.Id]">
+            <i class="ionicons ion-ios-arrow-back hm-icon"></i>
+            <span>Check out</span>
+        </a>
+    </div>
+    <div class="team-summary">
+        <div id="first-team" class="content span2">
+            <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+            <span>{{selectedMatch.FirstTeamName}}</span>
+        </div>
+        <div id="league" class="content span2">
+            <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+            <span>{{selectedMatch.MatchType}}</span>
+            <span>VS</span>
+        </div>
+        <div id="second-team" class="content span2">
+            <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+            <span>{{selectedMatch.SecondTeamName}}</span>
+        </div>
+    </div>
+    <div class="col-sm-12 col-centered datails">
+        <i class="fa fa-map-marker hm-icon"></i>
+        <span>{{selectedMatch.Location}}</span>
+    </div>
+    <br />
+    <div class="col-sm-12 col-centered datails">
+        <div class="col-sm-5">
+            <p>{{selectedMatch.MatchDate}}</p>
+        </div>
+        <div class="col-sm-4">
+            <p>Kick-off</p>
+        </div>
+        <div class="col-sm-3">
+            <p>{{selectedMatch.MatchTime}}</p>
+        </div>
+    </div>
+    <div class="line-with-circle col-sm-12"></div>
+    <div id="seat-information" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>Gate</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Block</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Row</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Seat</span>
+        </div>
+        <div class="col-sm-3">
+            <span>Price</span>
+        </div>
+    </div>
+    <div id="seat-information-result" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>4</span>
+        </div>
+        <div class="col-sm-2">
+            <span>118</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-3">
+            <span>70 SR</span>
+        </div>
+    </div>
+    <div class="line col-sm-12"></div>
+    <div id="seat-information" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>Gate</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Block</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Row</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Seat</span>
+        </div>
+        <div class="col-sm-3">
+            <span>Price</span>
+        </div>
+    </div>
+    <div id="seat-information-result" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>4</span>
+        </div>
+        <div class="col-sm-2">
+            <span>118</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-3">
+            <span>70 SR</span>
+        </div>
+    </div>
+    <div class="line col-sm-12"></div>
+    <div id="seat-information" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>Gate</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Block</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Row</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Seat</span>
+        </div>
+        <div class="col-sm-3">
+            <span>Price</span>
+        </div>
+    </div>
+    <div id="seat-information-result" class="col-sm-12 col-centered">
+        <div class="offset-sm-1 col-sm-2">
+            <span>4</span>
+        </div>
+        <div class="col-sm-2">
+            <span>118</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-2">
+            <span>1</span>
+        </div>
+        <div class="col-sm-3">
+            <span>70 SR</span>
+        </div>
+    </div>
+    <div class="line-with-circle col-sm-12"></div>
+
+    <div class="col-sm-12 col-centered padding-top">
+        <span>Price</span>
+    </div>
+    <div class="col-sm-12 col-centered">
+        <h2>240 SR</h2>
+    </div>
+    <div id="condition-title" class="col-sm-12 col-centered padding-top">
+        <span>Term and conditions</span>
+    </div>
+    <div class="col-sm-12 col-centered padding-top">
+        <button type="button" class="btn" (click)="save()">Buy</button>
+    </div>
+    <div class="col-sm-12 col-centered padding-top">
+        <button id="add-seats" type="button" class="btn">Add more seats</button>
+    </div>
+</div>
+
+<div id="selected-match-summary-frame" class="animate-load-left">
+    <div class="dark-background">
+        <div class="col-sm-12 get-match">
+            <div class="card-body">
+                <div id="first-team" class="content span2">
+                    <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+                    <span>{{selectedMatch.FirstTeamName}}</span>
+                </div>
+                <div id="league" class="content span2">
+                    <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+                    <span>{{selectedMatch.MatchType}}</span>
+                    <span>VS</span>
+                </div>
+                <div id="second-team" class="content span2">
+                    <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+                    <span>{{selectedMatch.SecondTeamName}}</span>
+                </div>
+                <div class="offset-sm-3 col-sm-6" id="datails">
+                    <span>{{selectedMatch.MatchDate}}</span>
+                    <span>{{selectedMatch.MatchTime}}</span>
+                </div>
+            </div>
+
+            <div class="offset-sm-2 col-sm-6" id="location">
+                <span>
+                    És un fet establert de forma evident que un lector es distraurà amb el contingut llegible d'una pàgina quan miri a la seva
+                    composició.
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="save-success">
+        <a class="close-message" (click)="closeMessage()">
+            <i class="ionicons ion-close hm-icon"></i>
+        </a>
+    <div class="check_mark">
+        <div class="sa-icon sa-success animate">
+            <span class="sa-line sa-tip animateSuccessTip"></span>
+            <span class="sa-line sa-long animateSuccessLong"></span>
+            <div class="sa-placeholder"></div>
+            <div class="sa-fix"></div>
+        </div>
+    </div>
+    <div class="col-centered success-message">
+        <span>Thank you for the purchase!</span>
+    </div>
+</div>

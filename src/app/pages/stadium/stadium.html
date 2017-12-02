@@ -1,0 +1,194 @@
+<div class="stadium animate-load-bottom">
+    <div id="match-details">
+        <div class="card-body">
+            <a id="back-button" [routerLink]="['/pages/getTicket/' + selectedMatch.Id]">
+                <i class="ionicons ion-ios-arrow-back hm-icon"></i>
+            </a>
+            <div class="content span2">
+                <span>{{selectedMatch.FirstTeamName}}</span>
+            </div>
+            <div id="first-team" class="content span2">
+                <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+            </div>
+            <div id="league" class="content span2">
+                <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+                <span>{{selectedMatch.MatchType}}</span>
+                <span>VS</span>
+            </div>
+            <div id="second-team" class="content span2">
+                <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+            </div>
+            <div class="content span2">
+                <span>{{selectedMatch.SecondTeamName}}</span>
+            </div>
+        </div>
+    </div>
+    <div id="stadium-details" class="col-centered">
+        <div class="col-sm-12">
+            <span>choose a block</span>
+        </div>
+        <div class="col-sm-12">
+            <i class="ionicons ion-ios-information-outline"></i>
+            <span id="information">You can select more than one</span>
+        </div>
+        <div id="stadium-screen" class="col-sm-12">
+            <div class="dropdown">
+                <a (dblclick)="setBlock()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="{{ ( '/stadium-screen.png' | baAppPicture ) }}" class="avatar" />
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="hint">
+                            Note: double click to block or click <a (click)="setBlock()"><b>here</b></a>
+                        </div>
+                        <div id="header" class="col-sm-12">
+                            <div class="col-sm-4 item">
+                                <span>Block</span>
+                                <span>118</span>
+                            </div>
+                            <div class="col-sm-4 item">
+                                <span>Available Seats</span>
+                                <span>200</span>
+                            </div>
+                            <div class="col-sm-4 item">
+                                <span>Total Price</span>
+                                <span>50 - 70 SR</span>
+                            </div>
+                        </div>
+                        
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div id="session-time" class="col-sm-12">
+            <span>Session Time:
+                <b>15:00</b>
+            </span>
+        </div>
+
+        <div id="stadium-color-details" class="col-sm-12">
+            <span>
+                <i class="fa fa-circle selected"></i> Selected</span>
+            <span>
+                <i class="fa fa-circle available"></i> Available</span>
+            <span>
+                <i class="fa fa-circle reserved"></i> Reserved</span>
+            <span>
+                <i class="fa fa-circle not-available"></i> Not Available</span>
+        </div>
+
+    </div>
+    <div id="filter">
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span>Filter </span>
+                <i class="fa fa-filter hm-icon"></i>
+            </a>
+            <ul class="dropdown-menu" data-dropdown-in="slideInRight" data-dropdown-out="flipOutX">
+                <li>
+                    <div id="header" class="col-sm-12">
+                        <div class="col-sm-6">
+                            <span>Classes</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>Prices</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="First Class" label="First Class" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>100 SR to 200 SR</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="silver" label="Silver" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>70 SR to 90 SR</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-sm-12 filter-div">
+                        <div class="col-sm-6">
+                            <p-checkbox name="group1" value="normal" label="Normal" styleClass="filter-checkbox"></p-checkbox>
+                        </div>
+                        <div class="col-sm-6">
+                            <span>30 SR to 60 SrR</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div id="block">
+    <div id="choose-block" class="col-sm-12">
+        <a (click)="setBlock()">
+            <i class="ionicons ion-ios-arrow-back hm-icon"></i>
+            <span>choose a block</span>
+        </a>
+    </div>
+    <div id="block-id" class="offset-sm-1 col-sm-11">
+        <h2>Block 118</h2>
+    </div>
+
+    <div id="block-information" class="offset-sm-1 col-sm-11">
+        <div class="col-sm-6">
+            Available Seats
+        </div>
+        <div class="col-sm-6">
+            Total Price
+        </div>
+    </div>
+
+    <div id="block-information-result" class="offset-sm-1 col-sm-11">
+        <div class="col-sm-6">
+            200
+        </div>
+        <div class="col-sm-6">
+            70 - 50 SR
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-centered padding-top tickets" id="ticket-title">
+        Tickets
+    </div>
+
+    <div class="col-sm-12 col-centered padding-top tickets">
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">1</a>
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">2</a>
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">3</a>
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">4</a>
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">5</a>
+        <a class="number-of-tickets" (click)="activeNumberOfTickets($event, true)">6</a>
+    </div>
+
+    <div id="ticket-list" class="offset-sm-2 col-sm-8 padding-top tickets">
+            <div class="dropdown">
+                    <button class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More than 6
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item">7 Tickets</a>
+                      <a class="dropdown-item">8 Tickets</a>
+                      <a class="dropdown-item">9 Tickets</a>
+                    </div>
+                  </div>
+    </div>
+
+    <div class="block-footer">
+            <button type="button" [disabled]="!isTecketSelected" class="btn" [routerLink]="['/pages/seats/' + selectedMatch.Id]">Select seats</button>
+    </div>
+</div>

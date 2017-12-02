@@ -1,0 +1,108 @@
+<div id="selectedMatchDetails" class="animate-load-left">
+    <div class="row information">
+        <div class="col-sm-3 col-centered">
+            <a>
+                <i class="ionicons ion-ios-clock hm-icon"></i>
+                <span>Time Left</span>
+                <span>{{selectedMatch.TimeLeft}}</span>
+            </a>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <a>
+                <i class="fa fa-ticket hm-icon"></i>
+                <span>Remaining Tickets</span>
+                <span>{{selectedMatch.RemainingTickets}}</span>
+            </a>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <a>
+                <i class="fa fa-male hm-icon"></i>
+
+                <span>Audiance</span>
+                <span>{{selectedMatch.Audiance}}</span>
+            </a>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <a>
+                <i class="ionicons ion-ios-people  hm-icon"></i>
+                <span>Age</span>
+                <span>{{selectedMatch.Age}}</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-12 more-information">
+        <a>
+            <i [ngClass]="selectedMatch.SpecialIcon"></i>
+            <span>{{selectedMatch.Special}}</span>
+        </a>
+    </div>
+    <div class="col-sm-12 more-information-location">
+        <a>
+            <i class="fa fa-map-marker hm-icon"></i>
+            <small>Location</small>
+            <span>{{selectedMatch.Location}}</span>
+        </a>
+    </div>
+
+    <div id="buy-footer" class="col-sm-12">
+        <button type="button" class="btn" [routerLink]="['/pages/stadium/' + selectedMatch.Id]">Buy Ticket</button>
+
+        <small>Share it with your friends!</small>
+
+        <ul>
+            <li>
+                <a>
+                    <i class="facebook fa fa-facebook hm-icon"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="twitter fa fa-twitter hm-icon"></i>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="google-plus ionicons ion-social-googleplus hm-icon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="selectedMatchFrame" class="animate-load-left">
+    <div class="dark-background">
+        <a class="back-home" [routerLink]="['/pages']">
+            <i class="ionicons ion-close hm-icon"></i>
+        </a>
+            <div class="col-sm-12 get-match">
+                    <div class="card-body">
+                        <div id="first-team" class="content span2">
+                            <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+                            <span>{{selectedMatch.FirstTeamName}}</span>
+                        </div>
+                        <div id="league" class="content span2">
+                            <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+                            <span>{{selectedMatch.MatchType}}</span>
+                            <span>VS</span>
+                        </div>
+                        <div id="second-team" class="content span2">
+                            <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+                            <span>{{selectedMatch.SecondTeamName}}</span>
+                        </div>
+                        <div class="offset-sm-3 col-sm-6" id="datails">
+                                <span>{{selectedMatch.MatchDate}}</span>
+                                    <span>{{selectedMatch.MatchTime}}</span>
+                            </div>
+                    </div>
+                        
+                    <div class="offset-sm-2 col-sm-6" id="location">
+                        <span>
+                                És un fet establert de forma evident que un lector es distraurà amb el contingut llegible d'una pàgina quan miri a la seva composició.
+                        </span>
+                    </div>
+                </div>
+        
+
+    </div>
+
+</div>

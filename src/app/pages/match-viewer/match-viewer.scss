@@ -1,0 +1,169 @@
+@import '../../theme/sass/_variables';
+
+.match-viewer {
+  background: $default;
+  color: #2e3436;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 5px solid #f6f6f6;
+  height: 340px;
+  .card-body{
+    background: $default;
+    padding: 10px 0;
+  }
+
+  .content{
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    padding: 0;
+    float: left;
+    padding: 30px 20px 10px 20px;
+
+    span {
+      font-size: 14px;
+      display: block;
+    }
+    
+  }
+
+  #league{
+    padding-top: 3px;
+    width: 40%;
+    span{
+      font-size: 7px;
+      color: #9a9a9a;
+      display: block;
+      font-family: $font-family-light;
+    }
+
+    img{
+      max-width: 70px;
+      max-height: 70px;  
+    }
+
+    span:last-child{
+    font-size: 22px;
+    }
+  }
+  
+  .avatar {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .footer {
+    font-size: $small-font-size;
+    padding: 20px 10px;
+    width: 100%;
+    color: #9a9a9a;
+    position: absolute;
+    bottom: 0;
+
+
+    i{
+      color: rgba(246,41,12,1);
+    }
+
+    .hide{
+      opacity: 0;
+    }
+  }
+
+  #match-details{
+    font-size: $meduim-font-size + 1;
+    color: #9a9a9a;
+    text-align: center;
+    padding: 150px 25px 5px 25px;
+    ul{
+      padding: 0;
+      font-family: $font-family;
+      font-weight: normal;
+      & > li{
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 25px;
+        &:after{
+          content: '|';
+        }
+      }
+  
+      & > li:last-child{
+        &:after{
+          content: ' ';
+        }
+      }
+    }
+  }
+  
+  #location{
+    font-size: $small-font-size + 1;
+    color: #9a9a9a;
+    text-align: center;
+    display: block;
+  padding-top: 5px;
+    i{
+      color: $sidebar;
+    }
+  }
+
+  .not-available{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.67);
+
+    span{
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      width: 100%;
+      font-size: 12px;
+      color: #da2c3b;
+      font-weight: bold;
+    }
+  }
+
+  
+  .back{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #da2c3b;
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    a{
+        padding: 10px;
+    }
+}
+
+.next{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  a{
+      padding: 10px;
+  }
+}
+}
+
+#first-team{
+  padding-left: 50px;
+}
+
+#second-team{
+  padding-right: 50px;
+}

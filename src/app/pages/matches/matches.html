@@ -1,0 +1,52 @@
+
+        <div class="col-md-6 col-sm-12 col-xs-12 matches-card" *ngFor="let match of matches">
+                <div class="card-body">
+                <div class="content span2">
+                    <img src="{{ ( match.FirstTeam | baAppPicture ) }}" class="avatar" />
+                    <span>{{match.FirstTeamName}}</span>
+                </div>
+                <div id="league" class="content span2">
+                    <img src="{{ ( match.MatchLeague | baAppPicture ) }}" />
+                    <span>{{match.MatchType}}</span>
+                    <span>VS</span>
+                </div>
+                <div class="content span2">
+                    <img src="{{ ( match.SecondTeam | baAppPicture ) }}" class="avatar" />
+                    <span>{{match.SecondTeamName}}</span>
+                </div>
+            </div>
+                <div id="match-details">
+                    <ul class="f-menu">
+                        <li>
+                            <a>
+                                {{match.MatchDate}}
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                {{match.MatchTime}}
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Available Seats {{match.AvailableSeat}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="location">
+                    <span>
+                        <i class="fa fa-map-marker"></i>
+                        {{match.Location}}
+                    </span>
+                </div>
+                <div class="footer">
+                        <span [ngClass]="{'hide': match.Status == 0}">
+                                <i [ngClass]="match.StatusIcon"></i>
+                            {{match.StatusDescription}}
+                        </span>
+                    </div>
+                <div Class="not-available" *ngIf="match.Status == 0">
+                    <span>Sold out</span>
+                </div>
+            </div>

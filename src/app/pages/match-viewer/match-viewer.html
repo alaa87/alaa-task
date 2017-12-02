@@ -1,0 +1,62 @@
+<div class="col-sm-12 match-viewer">
+    <div class="card-body">
+            <div class="back" (click)="back()">
+                    <a>
+                        <i class="ionicons ion-ios-arrow-back"></i>
+                    </a>
+                </div>
+        <div id="first-team" class="content span2">
+            <img src="{{ ( selectedMatch.FirstTeam | baAppPicture ) }}" class="avatar" />
+            <span>{{selectedMatch.FirstTeamName}}</span>
+        </div>
+        <div id="league" class="content span2">
+            <img src="{{ ( selectedMatch.MatchLeague | baAppPicture ) }}" />
+            <span>{{selectedMatch.MatchType}}</span>
+            <br />
+            <span>VS</span>
+        </div>
+        <div id="second-team" class="content span2">
+            <img src="{{ ( selectedMatch.SecondTeam | baAppPicture ) }}" class="avatar" />
+            <span>{{selectedMatch.SecondTeamName}}</span>
+        </div>
+        <div class="next" (click)="next()">
+                <a>
+                    <i class="ionicons ion-ios-arrow-forward"></i>
+                </a>
+            </div>
+    </div>
+    <div id="match-details">
+        <ul class="f-menu">
+            <li>
+                <a>
+                    {{selectedMatch.MatchDate}}
+                </a>
+            </li>
+            <li>
+                <a>
+                    {{selectedMatch.MatchTime}}
+                </a>
+            </li>
+            <li>
+                <a>
+                    Available Seats {{selectedMatch.AvailableSeat}}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="location">
+        <span>
+            <i class="fa fa-map-marker"></i>
+            {{selectedMatch.Location}}
+        </span>
+    </div>
+    <div class="footer">
+        <span [ngClass]="{'hide': selectedMatch.Status == 0}">
+            <i [ngClass]="selectedMatch.StatusIcon"></i>
+            {{selectedMatch.StatusDescription}}
+        </span>
+    </div>
+    <div Class="not-available" *ngIf="selectedMatch.Status == 0">
+        <span>Sold out</span>
+    </div>
+</div>
