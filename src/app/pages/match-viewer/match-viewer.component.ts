@@ -32,7 +32,6 @@ export class MatchViewerComponent implements OnInit {
             this.matches = data;
             this.selectedIndex = 0;
             this.totalLength = this.matches.length;
-            console.log(this.totalLength);
             this.selectedMatch = this.matches[this.selectedIndex];
           });
       }

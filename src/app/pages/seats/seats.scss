@@ -183,12 +183,12 @@ font-size: $small-font-size;
   }
 }
 
-#block{
+#seat-block{
   position: fixed;
   height: 100%;
   background: $default;
   width: $active-block;
-  margin-left: $sidebar-width;
+  left: $sidebar-width;
   z-index: 1030;
   opacity: 0;
   transition: all .3s ease-in;
@@ -270,4 +270,71 @@ font-size: $small-font-size;
       border: 1px solid rgba(181,73,63,1);
     }
   }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  #seat-block{
+    width: calc(100% - #{$sidebar-width});
+    top: calc(100% / 2);
+    height: calc(100% / 2);
+    left: $sidebar-width;
+  }
+
+  .seats.active{
+    width: calc(100% - #{$sidebar-width});
+    left: $sidebar-width;
+    height: calc(100% / 2);
+  }
+
+  .seats #seats-details #seats-screen{
+    padding: 20px;
+
+    img{
+      width: 350px;
+    }
+  }
+
+  .seats #match-details .card-body{
+    width:100%;
+  }
+}
+
+@media only screen 
+and (max-device-width : 736px)
+{ 
+  body{
+    overflow: auto;
+  }
+  #seat-block{
+    position: absolute;
+    width: calc(100% - #{$sidebar-width});
+    top: 500px;
+    height: 500px;
+  }
+
+  .seats.active{
+    position: absolute;
+    width: calc(100% - #{$sidebar-width});
+    left: $sidebar-width;
+    height: 500px;
+  }
+
+  .get-match #location {
+    font-size: 18px;
+}
+
+.seats #match-details .card-body{
+  width: 100%;
+}
+
+.seats #seats-details #seats-screen img{
+  width: 350px;
+}
+
+#buy-footer{
+  bottom: 0;
+}
 }

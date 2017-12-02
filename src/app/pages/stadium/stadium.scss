@@ -5,7 +5,7 @@ $active-block: 450px;
 .stadium{
   position: fixed;
   left: $sidebar-width;
-  width: 100%;
+  width: calc(100% - #{$sidebar-width});
   background: #f7f7f7;
   height: 100%;
   z-index: 1030;
@@ -348,13 +348,10 @@ font-size: $small-font-size;
   }
 
   .block-footer{
-
-    position: absolute;
-    bottom: 15%;
-    text-align: center;
-    width: 100%;
+    padding: 50px 0;
       button{
         width: 60%;
+        margin: 0;
         border-radius: 30px;
         padding: 15px;
         border: 0;
@@ -383,4 +380,77 @@ font-size: $small-font-size;
       text-decoration: underline !important;
     }
   }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  #selectedMatchDetails{
+    width: calc(100% - #{$sidebar-width});
+    top: calc(100% / 2);
+    height: calc(100% / 2);
+  }
+
+  #selectedMatchFrame{
+    width: calc(100% - #{$sidebar-width});
+    left: $sidebar-width;
+    height: calc(100% / 2);
+  }
+
+  .get-match #datails{
+    margin-left: 30%;
+  }
+
+  .get-match #location {
+    font-size: 18px;
+    margin-left: 20%;
+    width: 400px;
+}
+
+#buy-footer{
+  bottom: 0;
+}
+}
+
+@media only screen 
+and (max-device-width : 736px)
+{ 
+  body{
+    overflow: auto;
+  }
+  .stadium{
+    position: absolute;
+  }
+ 
+  #stadium-screen{
+    img{
+      width: 150px;
+    }
+  }
+  .stadium #stadium-details #session-time {
+    bottom: 35px;
+    text-align: center;
+    padding: 0;
+}
+
+.stadium #stadium-color-details {
+  bottom: 10px;
+  text-align: center;
+  padding: 0;
+}
+
+#block.active{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - #{$sidebar-width});
+}
+
+#block #block-information-result, #block #block-id{
+  padding-bottom: 0;
+}
+
+.stadium #match-details .card-body{
+  width: 100%; 
+}
 }
